@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Retro Workout Schedule</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ff8a00;
+            font-family: 'VT323', 'Courier New', monospace;
+            padding: 10px;
+            margin: 0;
+        }
+        .container {
+            max-width: 100%;
+            background-color: #1e1e1e;
+            border: 3px solid #ff8a00;
+            box-shadow: 0 0 15px rgba(255, 138, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #ff8a00;
+            color: #121212;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 3px solid #ff8a00;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(45deg, #ff8a00, #ff5500);
+        }
+        .workout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .workout-table th {
+            background-color: #2a2a2a;
+            color: #00ffaa;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ff8a00;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .workout-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 138, 0, 0.3);
+            text-align: center;
+            font-size: 14px;
+        }
+        .workout-table tr:hover td {
+            background-color: #2a2a2a;
+        }
+        .date {
+            color: #00ffaa;
+            font-weight: bold;
+        }
+        .time {
+            color: #ff5e78;
+        }
+        .exercise {
+            color: #f5f5f5;
+        }
+        .rest-day {
+            color: #ff5e78;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .week-separator {
+            background-color: #2a2a2a;
+            height: 5px;
+            border: none;
+            margin: 0;
+        }
+        .crt-effect {
+            position: relative;
+        }
+        .crt-effect::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.1) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .current-day td {
+            background-color: rgba(255, 138, 0, 0.15);
+            border-left: 3px solid #ff8a00;
+            border-right: 3px solid #ff8a00;
+        }
+        .retro-glow {
+            text-shadow: 0 0 5px rgba(255, 138, 0, 0.7);
+        }
+        .final-day td {
+            background-color: rgba(0, 255, 170, 0.15);
+            font-weight: bold;
+        }
+        .current-date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #00ffaa;
+            font-size: 12px;
+            text-align: right;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #ff5e78;
+            border-top: 1px solid rgba(255, 138, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container crt-effect">
+        <div class="header">
+            RETRO FITNESS CHALLENGE
+            <div class="current-date">2025.05.13</div>
+        </div>
+        <table class="workout-table">
+            <thead>
+                <tr>
+                    <th>TANGGAL</th>
+                    <th>JAM</th>
+                    <th>LATIHAN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="current-day">
+                    <td class="date">May 13 (Tue)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr>
+                    <td class="date">May 14 (Wed)</td>
+                    <td class="time">17:30-18:15</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr>
+                    <td class="date">May 15 (Thu)</td>
+                    <td class="time rest-day">ISTIRAHAT</td>
+                    <td class="exercise rest-day">ISTIRAHAT</td>
+                </tr>
+                <tr>
+                    <td class="date">May 16 (Fri)</td>
+                    <td class="time">10:00-10:45</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr>
+                    <td class="date">May 17 (Sat)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr>
+                    <td class="date">May 18 (Sun)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr>
+                    <td class="date">May 19 (Mon)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 3×12, Push-up 3×8, Pull-up 3×Max, Curl & Press 3×10</td>
+                </tr>
+                <tr class="week-separator">
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="date">May 20 (Tue)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 21 (Wed)</td>
+                    <td class="time">17:30-18:15</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 22 (Thu)</td>
+                    <td class="time rest-day">ISTIRAHAT</td>
+                    <td class="exercise rest-day">ISTIRAHAT</td>
+                </tr>
+                <tr>
+                    <td class="date">May 23 (Fri)</td>
+                    <td class="time">10:00-10:45</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 24 (Sat)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 25 (Sun)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 26 (Mon)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 4×15, Push-up 4×10, Pull-up 4×Max, Curl & Press 4×12</td>
+                </tr>
+                <tr class="week-separator">
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="date">May 27 (Tue)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 28 (Wed)</td>
+                    <td class="time">17:30-18:15</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 29 (Thu)</td>
+                    <td class="time rest-day">ISTIRAHAT</td>
+                    <td class="exercise rest-day">ISTIRAHAT</td>
+                </tr>
+                <tr>
+                    <td class="date">May 30 (Fri)</td>
+                    <td class="time">10:00-10:45</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr>
+                    <td class="date">May 31 (Sat)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 01 (Sun)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 02 (Mon)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×15, Push-up 5×12, Pull-up 5×Max, +Kickback & Lateral Raise 3×12</td>
+                </tr>
+                <tr class="week-separator">
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 03 (Tue)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 04 (Wed)</td>
+                    <td class="time">17:30-18:15</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 05 (Thu)</td>
+                    <td class="time rest-day">ISTIRAHAT</td>
+                    <td class="exercise rest-day">ISTIRAHAT</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 06 (Fri)</td>
+                    <td class="time">10:00-10:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 07 (Sat)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 08 (Sun)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 09 (Mon)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr>
+                    <td class="date">Jun 10 (Tue)</td>
+                    <td class="time">08:00-08:45</td>
+                    <td class="exercise">Squat 5×20, Push-up 5×15, Pull-up 5×Max, Semua Barbel 4×15</td>
+                </tr>
+                <tr class="final-day">
+                    <td class="date retro-glow">Jun 11 (Wed)</td>
+                    <td class="time retro-glow">17:30-18:15</td>
+                    <td class="exercise retro-glow">Final: Squat 100x, Push-up 50x, Pull-up Max, Barbel 3×15</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            NO PAIN NO GAIN // LEVEL UP YOUR FITNESS // RETRO CHALLENGE 2025
+        </div>
+    </div>
+
+    <script>
+        // Highlight current day function
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const rows = document.querySelectorAll('.workout-table tbody tr');
+            
+            rows.forEach(row => {
+                const dateCell = row.querySelector('.date');
+                if (dateCell) {
+                    const dateText = dateCell.textContent;
+                    if (dateText.includes('May 13')) {
+                        row.classList.add('current-day');
+                    } else {
+                        row.classList.remove('current-day');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
